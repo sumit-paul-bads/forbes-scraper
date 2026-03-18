@@ -31,6 +31,22 @@ This project extracts billionaire data from Forbes using Scrapy by leveraging in
 
 ---
 
+## 🔍 API Discovery Process
+
+Instead of scraping HTML content, the data was extracted by identifying internal API endpoints used by the Forbes website.
+
+Steps followed:
+- Opened the Forbes Billionaires page in browser
+- Used Developer Tools (F12) → Network tab
+- Filtered XHR/Fetch requests to locate API calls
+- Identified JSON response containing billionaire data
+- Extracted the API endpoint and tested it directly in browser
+- Analyzed query parameters such as `start` and `limit` for pagination
+
+This approach allowed efficient and reliable data extraction without relying on HTML parsing.
+
+---
+
 ## 📂 Dataset Sample
 
 ![1fs](https://github.com/user-attachments/assets/8e491506-6f94-4a20-b190-65b23a1612ea)
